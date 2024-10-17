@@ -19,6 +19,17 @@ source ./venv/bin/activate
 python -m pip install --upgrade pip
 ```
 
+## Run Ollama Server
+
+For docker, run the following command:
+```bash
+docker run --rm -d -p 11434:11434 --name ollama-server ollama/ollama
+docker exec -it ollama-server /bin/bash
+> ollama run llama3
+```
+
+For local on Windows, see https://dev.to/timesurgelabs/how-to-run-llama-3-locally-with-ollama-and-open-webui-297d
+
 ## Frontend Server Setup
 ```bash
 cd open-webui
